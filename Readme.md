@@ -1,8 +1,8 @@
 # Личный проект «Седона»
 
 * Студент: [Дрозд Константин](https://up.htmlacademy.ru/htmlcss-individual/2/user/2653045).
-* Наставник:[Андрей Грачев] (https://htmlacademy.ru/profile/angra).
-
+* Наставник:[Андрей Грачев](https://htmlacademy.ru/profile/angra).
+* Сайт: {Мой проект "Седона"}(https://github.com/Kostya1993/2653045-sedona-2)
 ---
 
 _Не удаляйте и не обращайте внимание на файлы:_<br>
