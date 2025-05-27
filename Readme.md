@@ -2,7 +2,7 @@
 
 * Студент: [Дрозд Константин](https://up.htmlacademy.ru/htmlcss-individual/2/user/2653045).
 * Наставник:[Андрей Грачев](https://htmlacademy.ru/profile/angra).
-* Сайт:[Проект 'Седона'](https://github.com/Kostya1993/2653045-sedona-2).
+* Сайт:[Проект 'Седона'](https://kostya1993.github.io/2653045-sedona-2/).
 ---
 
 _Не удаляйте и не обращайте внимание на файлы:_<br>
