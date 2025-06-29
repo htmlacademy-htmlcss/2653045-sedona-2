@@ -162,8 +162,8 @@ body {
 .main-index {
   padding-top: 51px;
   padding-bottom: 82px;
-  background-image: url("images/von.jpg");
-  background-size: cover;
+  background-image: url("../images/von.jpg");
+  background-size: contain;
   background-position: center top;
   background-repeat: no-repeat;
   background-color: #f2f2f2;
