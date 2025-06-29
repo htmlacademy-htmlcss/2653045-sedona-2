@@ -1,0 +1,358 @@
+/* === Шрифты === */
+@font-face {
+  font-family: "PT Sans";
+  font-style: normal;
+  font-weight: 400;
+  src: url("../fonts/ptsans-400.woff2") format("woff2");
+  font-display: swap;
+}
+@font-face {
+  font-family: "PT Sans";
+  font-style: normal;
+  font-weight: 700;
+  src: url("../fonts/ptsans-700.woff2") format("woff2");
+  font-display: swap;
+}
+
+/* === CSS Переменные === */
+:root {
+  --font-main: "PT Sans", sans-serif;
+  --font-base-size: 18px;
+  --font-color: #000000;
+  --bg-color: #f2f2f2;
+  --accent-color: #756157;
+  --highlight-color: #82b3d3;
+  --success-color: #7db54f;
+}
+
+/* === Общие стили === */
+html {
+  height: 100%;
+}
+body {
+  margin: 0;
+  font-family: var(--font-main);
+  font-size: var(--font-base-size);
+  line-height: 1.6;
+  color: var(--font-color);
+  background-color: var(--bg-color);
+}
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  border: 0;
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+  white-space: nowrap;
+  clip-path: inset(100%);
+}
+.wrapper {
+  display: flex;
+  max-width: 1200px;
+  min-height: 100vh;
+  margin: 0 auto;
+  flex-direction: column;
+}
+
+/* === Кнопки === */
+.button {
+  font-family: inherit;
+  font-size: 16px;
+  line-height: 20px;
+  font-weight: 700;
+  text-align: center;
+  text-transform: uppercase;
+  color: #ffffff;
+  background-color: var(--accent-color);
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  padding: 10px 20px;
+  text-decoration: none;
+}
+.button:hover {
+  opacity: 0.9;
+}
+.button-favorite {
+  background-color: var(--highlight-color);
+}
+.button-active {
+  border: 2px solid var(--accent-color);
+}
+
+/* === Заголовки и текст === */
+.slogan, .slogan-content, .title, .text {
+  margin: 0;
+  text-align: center;
+}
+.slogan {
+  font-size: 30px;
+  font-weight: 700;
+  text-transform: uppercase;
+  line-height: 36px;
+  padding: 0 70px;
+}
+.slogan-content {
+  font-size: 22px;
+  color: #333333;
+  line-height: 26px;
+  padding: 0 70px;
+}
+.title {
+  font-size: 24px;
+  font-weight: 700;
+  text-transform: uppercase;
+  line-height: 28px;
+}
+.text {
+  color: #333333;
+  font-weight: 400;
+  line-height: 24px;
+}
+
+/* === Header === */
+.page-header {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px 70px;
+  background-color: #ffffff;
+}
+.navigation {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.navigation-list {
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  gap: 20px;
+}
+.navigation-link {
+  display: block;
+  padding: 20px 16px;
+  font-size: 20px;
+  font-weight: 700;
+  text-decoration: none;
+  color: var(--font-color);
+}
+.navigation-user {
+  display: flex;
+  width: 268px;
+  margin-left: auto;
+  list-style: none;
+  padding: 0;
+}
+.like-count {
+  font-size: 10px;
+  font-weight: 400;
+  color: #ffffff;
+  background-color: var(--success-color);
+  padding: 5px;
+  border-radius: 50%;
+}
+
+/* === Main Index === */
+.main-index {
+  padding-top: 51px;
+  padding-bottom: 82px;
+  background-image: url("images/von.jpg");
+  background-size: cover;
+  background-position: center top;
+  background-repeat: no-repeat;
+  background-color: #f2f2f2;
+}
+.picture-hero {
+  display: block;
+  width: 458px;
+  margin: 0 auto;
+}
+.advantages, .service, .search-hotel {
+  padding: 60px 70px;
+  text-align: center;
+}
+.advantages-list, .service-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  gap: 20px;
+}
+.advantages-item, .service-item {
+  width: 400px;
+  min-height: 385px;
+  padding: 80px;
+  box-sizing: border-box;
+  text-align: center;
+  background-color: rgba(131, 179, 211, 0.12);
+}
+.search-hotel {
+  padding-top: 96px;
+  padding-bottom: 96px;
+}
+.button-search-hotel {
+  display: block;
+  width: 376px;
+  margin: 0 auto;
+  padding: 8px 50px;
+  font-size: 20px;
+  line-height: 36px;
+  border-radius: 4px;
+  background-color: var(--highlight-color);
+  color: #ffffff;
+}
+
+/* === Каталог === */
+.main-inner {
+  background-color: #ffffff;
+}
+.catalog {
+  padding: 60px 70px;
+}
+.form-catalog {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px;
+  margin-bottom: 50px;
+}
+.catalog-filter-group {
+  border: none;
+  padding: 0;
+  margin: 0;
+}
+.catalog-filter-title {
+  font-size: 20px;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+.catalog-filter-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.catalog-filter-item {
+  margin-bottom: 12px;
+}
+.control {
+  font-size: 18px;
+  line-height: 24px;
+}
+.control-input {
+  margin-right: 10px;
+}
+.price-container {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  margin-bottom: 20px;
+}
+.price {
+  font-size: 16px;
+  font-weight: 400;
+}
+.price-input {
+  width: 90px;
+  font-size: 16px;
+  padding: 5px;
+  background-color: var(--bg-color);
+}
+.range-container {
+  width: 100%;
+  display: flex;
+  gap: 10px;
+}
+.price-input-min, .price-input-max {
+  flex-grow: 1;
+}
+.button-form-catalog-submit {
+  background-color: var(--highlight-color);
+  color: #ffffff;
+}
+.button-form-catalog-reset {
+  background-color: transparent;
+  border: 2px solid var(--highlight-color);
+  color: var(--highlight-color);
+}
+.text-sort {
+  font-size: 24px;
+  font-weight: 700;
+  margin: 20px 0;
+}
+.select-control {
+  font-family: inherit;
+  font-size: 18px;
+  line-height: 21px;
+  padding: 5px;
+  margin-bottom: 20px;
+}
+.hotel-title {
+  font-size: 20px;
+  font-weight: 700;
+  margin-top: 10px;
+  text-align: center;
+}
+
+/* === Footer === */
+.site-footer, .page-footer {
+  background-color: #ffffff;
+  padding: 60px 70px;
+}
+.footer-social-list {
+  list-style: none;
+  display: flex;
+  gap: 10px;
+  padding: 0;
+  margin: 20px 0;
+}
+.footer-phone {
+  text-decoration: none;
+  color: var(--font-color);
+}
+.footer-address {
+  font-style: normal;
+  color: var(--font-color);
+}
+.subscription-footer {
+  padding: 96px 70px 104px;
+  text-align: center;
+}
+.title-subscription-footer {
+  font-size: 30px;
+  font-weight: 700;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+}
+.text-subscription-footer {
+  font-size: 18px;
+  margin-bottom: 54px;
+}
+.form-subscription-footer {
+  width: 684px;
+  margin: 0 auto;
+  display: flex;
+  gap: 0;
+}
+.field {
+  flex: 1;
+  padding: 10px;
+  font-size: 18px;
+  background-color: var(--bg-color);
+  border: none;
+}
+.button-subscription {
+  font-size: 20px;
+  line-height: 36px;
+  background-color: var(--highlight-color);
+  color: #ffffff;
+  padding: 10px 30px;
+  border-radius: 0 4px 4px 0;
+  border: none;
+}
