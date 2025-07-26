@@ -1244,7 +1244,7 @@ body {
 .highlight-text {
   color: #ffffff;
 }
--- Модальное окно Поиск гостиницы --- */
+/* -- Модальное окно Поиск гостиницы --- */
 .modal-container {
   display: none;
   position: fixed;
