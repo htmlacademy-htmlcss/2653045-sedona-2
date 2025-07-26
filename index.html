@@ -47,6 +47,53 @@
                       d="M8.9 17a.9.9 0 0 1-.8-.4c-5.4-6.1-6.7-7.5-7-7.9A5.4 5.4 0 0 1 5.5 0C6.8 0 8 .5 9 1.3a5.46 5.46 0 0 1 9 4.1c0 1.3-.5 2.5-1.3 3.4l-7 7.9c-.2.2-.4.3-.8.3Zm-6-9.5c.3.4 3.5 4 6.1 6.9l6.2-7c.5-.5.7-1.2.7-2 0-1.8-1.5-3.3-3.3-3.3-1 0-2 .5-2.7 1.3-.3.3-.6.4-.9.4-.3 0-.6-.2-.8-.4-.7-.8-1.7-1.3-2.7-1.3-1.8 0-3.3 1.5-3.3 3.3-.1.9.3 1.6.7 2.1-.1 0-.1 0 0 0Z" />
                   </svg>
                 </div>
+                <!-- Модальное окно поиска гостиницы -->
+                <div class="modal-container" id="modal">
+                  <div class="modal">
+                    <button class="modal-close" type="button" onclick="closeModal()">×</button>
+                    <h2 class="modal-title">Поиск гостиницы в Седоне</h2>
+
+                    <form class="modal-form" action="#" method="get">
+                      <label>
+                        <span>Дата Заезда:</span>
+                        <input type="date" name="checkin" required>
+                        <span class="error-text">Мы не можем отправить вас в прошлое.</span>
+                      </label>
+
+                      <label>
+                        <span>Дата Выезда:</span>
+                        <input type="date" name="checkout" required>
+                        <span class="note-text">На эти даты есть свободные номера. Пока есть.</span>
+                      </label>
+                      <div class="modal-guests">
+                        <label>
+                          <span>Взрослые:</span>
+                          <div class="guest-counter">
+                            <button type="button">−</button>
+                            <input type="number" name="adults" value="2" min="1">
+                            <button type="button">+</button>
+                          </div>
+                        </label>
+
+                        <label>
+                          <span>Дети:
+                            <span class="tooltip-icon" tabindex="0">i</span>
+                          </span>
+                          <div class="guest-counter">
+                            <button type="button">−</button>
+                            <input type="number" name="children" value="2" min="0">
+                            <button type="button">+</button>
+                          </div>
+                          <div class="tooltip-text">
+                            Укажите количество детей, возраст которых от 6 до 18 лет. До 6 лет — бесплатно.
+                          </div>
+                        </label>
+                      </div>
+
+                      <button class="modal-submit" type="submit">Найти</button>
+                    </form>
+                  </div>
+                </div>
               </a>
             </li>
             <li class="navigation-item">
@@ -69,12 +116,15 @@
           <ul class="advantages-list">
             <li class="advantages-item is-image">
               <div class="advantages-item-container">
-                <h3 class="title title-advantages-item">Настоящий городок</h3>
-                <p class="text text-advantages-item">Седона — не аттракцион для туристов, там течёт своя жизнь</p>
+                <h3 class="title title-advantages-item highlight-text">Настоящий городок</h3>
+                <p class="text text-advantages-item highlight-text">
+                  Седона — не аттракцион для туристов, там течёт своя жизнь
+                </p>
               </div>
               <img class="advantages-item-img" src="images/photo-1.jpg" width="800" height="385"
                 alt="Вид на террасу городского банка">
             </li>
+
             <li class="advantages-item">
               <h3 class="title title-advantages-item">Небольшая площадь</h3>
               <p class="text text-advantages-item">Все достопримечательности находятся очень близко</p>
@@ -89,11 +139,12 @@
             </li>
             <li class="advantages-item is-image is-image-even">
               <div class="advantages-item-container">
-                <h3 class="title title-advantages-item">Там есть мост дьявола</h3>
-                <p class="text text-advantages-item">Да, по нему можно пройти! Если вы осмелитесь, разумеется</p>
+                <h3 class="title title-advantages-item highlight-text">Там есть мост дьявола</h3>
+                <p class="text text-advantages-item highlight-text">
+                  Да, по нему можно пройти! Если вы осмелитесь, разумеется
+                </p>
               </div>
-              <img class="advantages-item-img" src="images/photo-2.jpg" width="800" height="385"
-                alt="Мост Дьявола">
+              <img class="advantages-item-img" src="images/photo-2.jpg" width="800" height="385" alt="Мост Дьявола">
             </li>
             </li>
           </ul>
@@ -109,7 +160,7 @@
             </li>
             <li class="service-item service-icon-two">
               <h3 class="title title-service-item">Еда</h3>
-              <p class="text text-service-item">Всегда заказывайте<br>Топовый  фирменный бургер, вы не разочаруетесь!
+              <p class="text text-service-item">Всегда заказывайте<br>Топовый фирменный бургер, вы не разочаруетесь!
               </p>
             </li>
             <li class="service-item service-icon-three">
@@ -194,6 +245,15 @@
         </section>
       </footer>
     </div>
+
+
+
+
+
+
+
+
+
   </body>
 
 </html>

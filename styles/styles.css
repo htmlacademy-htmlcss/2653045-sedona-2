@@ -26,7 +26,7 @@ body {
   line-height: 21px;
   color: #000000;
 
-  background-color:  #f2f2f2;
+  background-color: #f2f2f2;
 }
 
 .visually-hidden {
@@ -228,7 +228,7 @@ body {
   background-image: url('../image/icons/header_heart.svg');
 } */
 
- .like-count-container {
+.like-count-container {
   position: relative;
 }
 
@@ -295,7 +295,8 @@ body {
 }
 
 .main-container {
-  flex-grow: 1; /* сделал главную-коробку жадной, теперь футер приколочен к полу */
+  flex-grow: 1;
+  /* сделал главную-коробку жадной, теперь футер приколочен к полу */
 }
 
 /* main section hero */
@@ -364,7 +365,7 @@ body {
 
 .advantages-item .title-advantages-item::after {
   content: '';
-  position:absolute;
+  position: absolute;
   width: 60px;
   height: 2px;
   top: 86px;
@@ -373,7 +374,8 @@ body {
 }
 
 .advantages-item:nth-child(2n) {
-  background-color: rgba(131, 179, 211, 0.12);;
+  background-color: rgba(131, 179, 211, 0.12);
+  ;
 }
 
 .is-image,
@@ -576,7 +578,7 @@ body {
 }
 
 .button-subscription:hover,
- .button-subscription:focus-visible {
+.button-subscription:focus-visible {
   background-color: #68a2ca;
 }
 
@@ -1005,7 +1007,7 @@ body {
 .product-card-link:hover,
 .product-card-link:focus-visible {
   outline: none;
-  color:#756157;
+  color: #756157;
 }
 
 .product-card-link:active {
@@ -1084,8 +1086,8 @@ body {
 }
 
 .card-stars {
- height: 100%;
- background-repeat: no-repeat;
+  height: 100%;
+  background-repeat: no-repeat;
 }
 
 .product-card-rating {
@@ -1111,27 +1113,27 @@ body {
 
 .card-stars-four {
   background-image:
-  url("../images/star.svg"),
-  url("../images/star.svg"),
-  url("../images/star.svg"),
-  url("../images/star.svg");
+    url("../images/star.svg"),
+    url("../images/star.svg"),
+    url("../images/star.svg"),
+    url("../images/star.svg");
   background-size: 18px 17px, 18px 17px, 18px 17px, 18px 17px;
   background-position: 0 10px, 24px 10px, 48px 10px, 72px 10px;
 }
 
 .card-stars-three {
   background-image:
-  url("../images/star.svg"),
-  url("../images/star.svg"),
-  url("../images/star.svg");
+    url("../images/star.svg"),
+    url("../images/star.svg"),
+    url("../images/star.svg");
   background-size: 18px 17px, 18px 17px, 18px 17px;
   background-position: 0 10px, 24px 10px, 48px 10px;
 }
 
 .card-stars-two {
   background-image:
-  url("../images/star.svg"),
-  url("../images/star.svg");
+    url("../images/star.svg"),
+    url("../images/star.svg");
   background-size: 18px 17px, 18px 17px;
   background-position: 0 10px, 24px 10px;
 }
@@ -1152,7 +1154,6 @@ body {
   min-width: 60px;
   height: 60px;
   padding: 11px 18px 12px 18px;
-
 
   font-size: 20px;
   line-height: 36px;
@@ -1195,4 +1196,197 @@ body {
 
 .page-footer {
   background-color: #ffffff;
+}
+
+
+/* ========== ДОБАВЛЕНО/ИЗМЕНЕНО ========== */
+
+/* Скругление кнопок "Подробнее" */
+.product-card-button {
+  padding: 8px 26px;
+  text-decoration: none;
+  border-radius: 4px;
+}
+
+/* Скругление кнопок "В избранное" */
+.button-favorite {
+  width: 140px;
+  padding: 8px 20px;
+  border: none;
+  border-radius: 4px;
+  background-color: #82b3d3;
+}
+
+.button-favorite-active {
+  padding: 8px 18px;
+  border-radius: 4px;
+}
+
+/* Скругление кнопок пагинации */
+.pagination-link {
+  display: block;
+  box-sizing: border-box;
+  min-width: 60px;
+  height: 60px;
+  padding: 11px 18px 12px 18px;
+  font-size: 20px;
+  line-height: 36px;
+  font-weight: 700;
+  text-align: center;
+  text-decoration: none;
+  text-transform: uppercase;
+  color: #ffffff;
+  background-color: #82b3d3;
+  border-radius: 4px;
+}
+
+/* Белый цвет текста для заданных фраз */
+.highlight-text {
+  color: #ffffff;
+}
+-- Модальное окно Поиск гостиницы --- */
+.modal-container {
+  display: none;
+  position: fixed;
+  z-index: 1000;
+  inset: 0;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.4);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.modal-container.show {
+  display: flex;
+  opacity: 1;
+}
+
+.modal {
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%) scale(0.95);
+  background: #fff;
+  padding: 40px;
+  border-radius: 16px;
+  width: 500px;
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3);
+  font-family: inherit;
+  opacity: 0;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.modal-container.show .modal {
+  transform: translate(-50%, -50%) scale(1);
+  opacity: 1;
+}
+
+.modal-close {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  font-size: 26px;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.modal-title {
+  margin-top: 0;
+  font-size: 24px;
+  font-weight: 700;
+  text-align: center;
+}
+
+.modal-form label {
+  display: block;
+  margin-bottom: 20px;
+  text-align: left;
+}
+
+.modal-form input[type="date"],
+.modal-form input[type="number"] {
+  width: 100%;
+  padding: 10px;
+  font-size: 16px;
+  box-sizing: border-box;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+}
+
+.error-text {
+  color: #ff5a5a;
+  font-size: 14px;
+}
+
+.note-text {
+  color: #666;
+  font-size: 14px;
+}
+
+.modal-guests {
+  display: flex;
+  gap: 20px;
+}
+
+.guest-counter {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 8px;
+}
+
+.guest-counter button {
+  background: #eee;
+  border: none;
+  font-size: 18px;
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+}
+
+.tooltip-icon {
+  display: inline-block;
+  background: #ddd;
+  border-radius: 50%;
+  width: 18px;
+  height: 18px;
+  line-height: 18px;
+  text-align: center;
+  font-size: 12px;
+  cursor: pointer;
+  margin-left: 5px;
+}
+
+.tooltip-text {
+  display: none;
+  position: absolute;
+  background: #333;
+  color: #fff;
+  font-size: 14px;
+  padding: 12px;
+  border-radius: 6px;
+  width: 250px;
+  bottom: -80px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.tooltip-icon:focus + .tooltip-text,
+.tooltip-icon:hover + .tooltip-text {
+  display: block;
+}
+
+.modal-submit {
+  margin-top: 20px;
+  width: 100%;
+  padding: 14px;
+  background-color: #82b3d3;
+  border: none;
+  font-size: 18px;
+  font-weight: 700;
+  color: white;
+  border-radius: 4px;
+  cursor: pointer;
 }
