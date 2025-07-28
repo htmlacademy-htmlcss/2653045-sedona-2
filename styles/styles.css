@@ -800,7 +800,8 @@ body {
 .price-container {
   width: 288px;
   margin-left: 70px;
-  margin-right: 70px;
+  magin-right: 70px;
+
 }
 
 .price-input {
@@ -810,7 +811,7 @@ body {
   font-weight: 700;
   color: #000000;
 
-  background-color: #f2f2f2;
+  background-color: #f2f2f2
 }
 
 .price {
@@ -1244,12 +1245,12 @@ body {
 .highlight-text {
   color: #ffffff;
 }
-/* -- Модальное окно Поиск гостиницы --- */
+
 .modal-container {
   display: none;
   position: fixed;
-  z-index: 1000;
   inset: 0;
+  z-index: 1000;
   justify-content: center;
   align-items: center;
   background-color: rgba(0, 0, 0, 0.4);
@@ -1263,130 +1264,174 @@ body {
 }
 
 .modal {
-  position: fixed;
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%, -50%) scale(0.95);
-  background: #fff;
-  padding: 40px;
-  border-radius: 16px;
-  width: 500px;
+  position: relative;
+  width: 577px;
+  padding: 64px 70px;
+  background-color: #ffffff;
+  border-radius: 30px;
   box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3);
-  font-family: inherit;
+  transform: scale(0.95);
   opacity: 0;
   transition: transform 0.3s ease, opacity 0.3s ease;
 }
 
 .modal-container.show .modal {
-  transform: translate(-50%, -50%) scale(1);
+  transform: scale(1);
   opacity: 1;
 }
 
+/* Кнопка закрытия */
 .modal-close {
   position: absolute;
-  top: 20px;
-  right: 20px;
-  font-size: 26px;
+  top: 64px;
+  right: 70px;
   background: none;
   border: none;
+  font-size: 26px;
+  color: #000;
   cursor: pointer;
 }
 
+/* Заголовок */
 .modal-title {
-  margin-top: 0;
-  font-size: 24px;
+  width: 413px;
+  height: 36px;
+  margin: 0 auto 64px auto;
+  font-family: 'PT Sans', sans-serif;
+  font-size: 30px;
   font-weight: 700;
+  line-height: 36px;
+  text-transform: uppercase;
+  color: #000000;
   text-align: center;
 }
 
+/* Форма */
 .modal-form label {
   display: block;
-  margin-bottom: 20px;
-  text-align: left;
+  font-weight: 700;
+  margin-bottom: 12px;
+}
+
+.modal-form-group {
+  margin-bottom: 23px;
 }
 
 .modal-form input[type="date"],
 .modal-form input[type="number"] {
-  width: 100%;
-  padding: 10px;
-  font-size: 16px;
-  box-sizing: border-box;
+  width: 440px;
+  height: 48px;
+  padding: 0 20px;
+  font-size: 18px;
+  font-family: inherit;
+  border: 1px solid #e5e5e5;
   border-radius: 4px;
-  border: 1px solid #ccc;
+  box-sizing: border-box;
 }
 
-.error-text {
-  color: #ff5a5a;
-  font-size: 14px;
-}
-
+/* Подписи и ошибки */
 .note-text {
-  color: #666;
-  font-size: 14px;
-}
-
-.modal-guests {
-  display: flex;
-  gap: 20px;
-}
-
-.guest-counter {
-  display: flex;
-  align-items: center;
-  gap: 10px;
+  font-size: 16px;
+  color: #333333;
   margin-top: 8px;
 }
 
-.guest-counter button {
-  background: #eee;
-  border: none;
-  font-size: 18px;
-  width: 30px;
-  height: 30px;
-  cursor: pointer;
+.error-text {
+  font-size: 16px;
+  color: #ff5a5a;
+  margin-top: 8px;
 }
 
+/* Взрослые / Дети */
+.modal-guests {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 48px;
+}
+
+.guest-block {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  font-weight: 700;
+  font-size: 18px;
+}
+
+/* Счетчик */
+.guest-counter {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.guest-counter button {
+  width: 40px;
+  height: 40px;
+  border: none;
+  background-color: #f2f2f2;
+  font-size: 24px;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+.guest-counter input[type="number"] {
+  width: 40px;
+  height: 40px;
+  font-size: 18px;
+  text-align: center;
+  border: 1px solid #e5e5e5;
+  border-radius: 4px;
+}
+
+/* Tooltip */
 .tooltip-icon {
   display: inline-block;
-  background: #ddd;
+  width: 20px;
+  height: 20px;
+  background-color: #82b3d3;
+  color: #ffffff;
+  font-size: 14px;
   border-radius: 50%;
-  width: 18px;
-  height: 18px;
-  line-height: 18px;
   text-align: center;
-  font-size: 12px;
+  line-height: 20px;
+  margin-left: 6px;
   cursor: pointer;
-  margin-left: 5px;
+  position: relative;
 }
 
 .tooltip-text {
   display: none;
   position: absolute;
-  background: #333;
-  color: #fff;
-  font-size: 14px;
-  padding: 12px;
-  border-radius: 6px;
-  width: 250px;
-  bottom: -80px;
+  bottom: -100px;
   left: 50%;
   transform: translateX(-50%);
+  background-color: #333333;
+  color: #ffffff;
+  padding: 12px;
+  border-radius: 6px;
+  width: 240px;
+  font-size: 14px;
+  line-height: 1.4;
+  z-index: 10;
 }
 
-.tooltip-icon:focus + .tooltip-text,
-.tooltip-icon:hover + .tooltip-text {
+.tooltip-icon:hover + .tooltip-text,
+.tooltip-icon:focus + .tooltip-text {
   display: block;
 }
 
+/* Кнопка "Найти" */
 .modal-submit {
-  margin-top: 20px;
-  width: 100%;
-  padding: 14px;
-  background-color: #82b3d3;
-  border: none;
-  font-size: 18px;
+  margin-top: 48px;
+  width: 577px;
+  height: 60px;
+  font-size: 20px;
   font-weight: 700;
+  font-family: inherit;
+  text-transform: uppercase;
+  background-color: #82b3d3;
   color: white;
-  border-radius: 4px;
+  border: none;
+  border-radius: 10px;
   cursor: pointer;
 }
